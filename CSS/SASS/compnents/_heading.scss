@@ -1,0 +1,36 @@
+//class for h2
+
+.head-with-border {
+    position: relative;
+    h2 {
+        background-color: $redcolor;
+        border: none;
+        border-radius: 15px;
+        margin: 40px auto;
+        padding: 10px 15px;
+        width: 400px;
+        color: white;
+        @media #{$maxMobile} {
+            width: 300px;
+        }
+        font: {
+            family: Tahoma;
+            weight: 400;
+            size: 16px;
+        }
+        text: {
+            transform: uppercase;
+            align: center;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            height: 1.5px;
+            width: 100%;
+            top: 50%;
+            left: 0;
+            z-index: -1;
+            background-color: $greycolor;
+        }
+    }
+}

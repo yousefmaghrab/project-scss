@@ -1,0 +1,14 @@
+//mixin for wbkit & moz
+@mixin prefxier($property, $value, $prefixes: ()) {
+    @each $prefix in $prefixes {
+        #{ '-' + $prefix + '-'+ $property}: $value;
+    }
+    #{$property}: $value;
+}
+
+
+//mixin for transition button
+@mixin transition-button {
+    transition: 0.5s;
+    background-color: $redcolor;
+}
